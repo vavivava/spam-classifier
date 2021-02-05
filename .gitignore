@@ -1,0 +1,5 @@
+.DS_Store
+*.ipynb
+*.pkl
+.idea/
+src/SMSSpamCollection.txt
