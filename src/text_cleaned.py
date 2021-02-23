@@ -1,15 +1,19 @@
-import pandas as pd
 import re
-#from collections import defaultdict
-import logging
-import wordcloud
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
 import nltk
+nltk.download('stopwords')
+from nltk.corpus import stopwords
 import json
+import os
+# from nltk.stem import WordNetLemmatizer
 
-with open('patterns_replacements.json') as config_file:
+
+script_dir = os.path.dirname(__file__)
+rel_path = 'patterns_replacements.json'
+abs_file_path = os.path.join(script_dir, rel_path)
+
+with open(abs_file_path) as config_file:
     json_data = json.load(config_file)
+
 
 class TextCleaned:
 
@@ -36,7 +40,7 @@ class TextCleaned:
             text = [w for w in text if not w in stops]
             text = " ".join(text)
 
-        text = nltk.WordPunctTokenizer().tokenize(text)
+        # text = nltk.WordPunctTokenizer().tokenize(text)
 
         return text
 

@@ -1,5 +1,11 @@
 .DS_Store
 *.ipynb
-*.pkl
-.idea/
 src/SMSSpamCollection.txt
+*.idea/
+venv/
+*.pyc
+*.png
+text_classifier
+tfidf_model
+predict/migrations/0001_initial.py
+predict/migrations/__init__.py

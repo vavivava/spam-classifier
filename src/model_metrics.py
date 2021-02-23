@@ -1,7 +1,7 @@
 import pandas as pd
-import numpy as np
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.metrics import roc_auc_score, roc_curve
+
 
 class ModelMetrics:
 

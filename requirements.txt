@@ -1,8 +1,3 @@
-dash
-dash-renderer
-dash-core-components
-dash-html-components
-dash-table
 plotly
 numpy
 pandas
@@ -10,10 +5,11 @@ scipy
 matplotlib
 seaborn
 pandas_datareader
-datetime
 requests
-gensim
 sklearn
 nltk
 matplotlib
+Django>=3.0,<4.0
+psycopg2-binary>=2.8
+pickleshare==0.7.5
 wordcloud

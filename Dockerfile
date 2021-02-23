@@ -1,10 +1,10 @@
 FROM python:3
 
-WORKDIR /usr/src/app
+ENV PYTHONUNBUFFERED=1
 
-COPY requirements.txt ./
+WORKDIR /code
+
+COPY requirements.txt /code/
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY src .
-
-CMD ["python3", "./main.py"]
+COPY . /code/
