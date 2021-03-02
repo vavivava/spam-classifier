@@ -19,7 +19,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a class="btn btn-primary" href="/results" role="button">View DB</a>
+                <a class="btn btn-primary" href="/results" role="button">History</a>
             </div>
         </div>
     </div>
@@ -45,6 +45,13 @@
             </form>
         </div>
     </div>
+</div>
+{% load static %}
+<div class="container pt-5">
+        <div class="col-md-4">
+            <h4>WordCloud of spam messages</h4>
+            <img border="0" src="{% static 'wordcloud_spam.jpg' %}" alt="spam_words" width="500" height="500" >
+        </div>
 </div>
 <script>
     $(document).on('submit', '#post-form',function(e){

@@ -32,7 +32,7 @@ class ReadingData:
         stopwords_data = set(wordcloud.STOPWORDS)
         fig_wordcloud = wordcloud.WordCloud(stopwords=stopwords_data, background_color="#ffa78c",
                                             width=3000, height=2000).generate(text)
-        plt.figure(figsize=(15, 15), frameon=True)
+        plt.figure(frameon=False)
         plt.imshow(fig_wordcloud)
         plt.axis('off')
-        plt.savefig('wordcloud_spam.png')
+        plt.savefig('wordcloud_spam.jpg')

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from src.message_predict import MessagePredict
-from .models import PredResults
+from . models import PredResults
 
 
 def predict(request):
@@ -22,3 +22,7 @@ def predict_chances(request):
 
         print('result is', + classification)
         return JsonResponse({'result': classification, 'input_the_text': input_the_text}, safe=False)
+
+def view_results(request):
+    data = {"dataset": PredResults.objects.all()}
+    return render(request, "results.html", data)
